@@ -1,0 +1,627 @@
+  /* DESIGN TOKENS */
+
+:root {
+    /* Colour palette */
+    --primary-color: #9333eb;
+    --secondary-color: #1e293b;
+    --background-color: #f0f4ff;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --white-color: #ffffff;
+
+    /* Typography */
+    --main-font: Arial, sans-serif;
+    --heading-size: 32px;
+    --subheading-size: 24px;
+    --body-size: 16px;
+
+    /* Spacing */
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 24px;
+    --space-extra: 32px;
+
+    /* Rounded corners */
+    --card-radius: 12px;
+}
+
+/* TYPOGRAPHY AND DESIGN SYSTEM */
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--body-size);
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--heading-size);
+}
+
+h2 {
+    font-size: var(--subheading-size);
+    color: var(--primary-color);
+}
+
+p {
+    font-size: var(--body-size);
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--space-extra);
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: var(--secondary-color);
+    padding: var(--space-medium);
+}
+
+nav a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: var(--space-small);
+}
+
+/* CONTENT CARDS */
+
+section,
+article {
+background-color: var(--card-color);
+    padding: var(--space-large);
+    margin: var(--space-large);
+    border-radius: var(--card-radius);
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.project-grid article {
+    flex: 1 1 240px;
+    margin: 0;
+    min-width: 0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--space-medium);
+}/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Navigation */
+nav {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2563eb;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+body{
+    background-color:lightblue;
+}
+:root{
+    --primary-color: #9333ea;
+}
+/* P8 - Sticky Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1e293b;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+/* P8 - Card Overlay */
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 220px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.project-card {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+
+
+}
+/* P9 - Responsive Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #222;
+    padding: 15px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Card Grid using Flexbox */
+.card-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: #8b5cf6;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    min-width:0px;
+}
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        display:flex;
+        gap:20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}
+/* P10 - Advanced Flexbox Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* P10 - Flexbox Footer */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* P11 - Newspaper CSS Grid */
+
+.news-header {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 25px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+.news-item {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid #8b5cf6;
+}
+
+.news-item h2 {
+    color: #8b5cf6;
+}
+
+.news-footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* P12 - Advanced CSS Grid */
+
+.gallery-title {
+    text-align: center;
+    margin: 30px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 180px 180px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-card {
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-one {
+    background: #8b5cf6;
+    grid-column: span 2;
+}
+
+.card-two {
+    background: #2563eb;
+}
+
+.card-three {
+    background: #059669;
+}
+
+.card-four {
+    background: #ea580c;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-one {
+        grid-column: span 1;
+    }
+
+    .gallery-card {
+        min-height: 130px;
+    }
+}
+
+/* P12 - Advanced CSS Grid */
+
+.gallery-title {
+    text-align: center;
+    margin: 30px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 180px 180px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-card {
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-one {
+    background: #8b5cf6;
+    grid-column: span 2;
+}
+
+.card-two {
+    background: #2563eb;
+}
+
+.card-three {
+    background: #059669;
+}
+
+.card-four {
+    background: #ea580c;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-one {
+        grid-column: span 1;
+    }
+
+    .gallery-card {
+        min-height: 130px;
+    }
+}
+
+/* P13 - Flexbox and Grid Combined */
+
+.p13-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.p13-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.p13-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.p13-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+.p13-card {
+    background: #8b5cf6;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.p13-footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .p13-header {
+        flex-direction: column;
+    }
+
+    .p13-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p13-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* P13 - Flexbox and Grid Combined */
+
+.p13-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.p13-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.p13-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.p13-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+.p13-card {
+    background: #8b5cf6;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.p13-footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .p13-header {
+        flex-direction: column;
+    }
+
+    .p13-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p13-grid {
+        grid-template-columns: 1fr;
+    }
+}
